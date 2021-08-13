@@ -1,4 +1,23 @@
-html, body {margin: 0; padding: 20px; height: 100%; }
+#main {margin: 0px; padding: 20px; height: 100%;}
+
+.main-hr {
+    margin-top: 20px;
+    border: 10px;
+}
+#answer-hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+@media (max-width:993px) {
+.getstarted-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+}}
 #ask-button {
     color: white;
     background: rgb(170, 20, 20);
@@ -8,15 +27,13 @@ html, body {margin: 0; padding: 20px; height: 100%; }
     border-radius: 15px;
     float: right;
 }
-
-
 #hashtag-form {
     float: right;
     margin-top: 60px;
 }
-hr {
+/*hr {
     margin-top: 30px;
-}
+}*/
 h6 {
     display: inline;
     margin-bottom: 20px;
@@ -44,7 +61,7 @@ h6 {
 }
 
 .like-button {
-    padding: 4px 15px;
+    padding: 2px 15px;
     border: 1px solid black;
     background: white;
     font-size: 15px;
@@ -68,7 +85,7 @@ h6 {
 }
 
 #submit textarea {
-    width: 700px;
+    width: 90%;
     height: 250px;
 }
 #hashtags {
@@ -87,4 +104,8 @@ h6 {
 
 #like {
     margin-right: 5px;
+}
+.container {
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
