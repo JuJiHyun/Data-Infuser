@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,400,300italic,300,400italic,100,100italic);
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+}
+
+body {
+  background: #fff;
+}
+
+/* #testImg{
+    position: relative;
+    left: 30px;
+  }
+  button.btn.btn-primary.play{
+    position: relative;
+    top: 40px;
+    left: -395px;
+    
+  } */
+
+/* #message-size {
+  size: 10rem;
+}   */

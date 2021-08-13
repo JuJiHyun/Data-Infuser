@@ -9,6 +9,7 @@ html, body {margin: 0; padding: 20px; height: 100%; }
     float: right;
 }
 
+
 #hashtag-form {
     float: right;
     margin-top: 60px;
@@ -18,15 +19,16 @@ hr {
 }
 h6 {
     display: inline;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #title {
-    display: block;
+    display: inline;
+    margin-bottom: 20px;
 }
 
-#answer h5,
-#answer button,
+.answer h5,
+.answer button,
 #title h2 {
     display: inline;
 }
@@ -35,20 +37,28 @@ h6 {
     display: block;
 }
 
-#answer button,
+.answer button,
 #title h6 {
     float: right;
+    margin-left: 10px;
 }
 
-#like-button {
-    padding: 8px 20px;
+.like-button {
+    padding: 4px 15px;
     border: 1px solid black;
     background: white;
     font-size: 15px;
     border-radius: 10px;
 }
 
+.like-button:hover {
+    background-color: rgb(170, 20, 20);
+    color: white;
+    border: none;
+}
+
 #submit button {
+    margin-top: 40px;
     padding: 8px 20px;
     border: 1px solid black;
     background-color: rgb(170, 20, 20);
@@ -60,4 +70,21 @@ h6 {
 #submit textarea {
     width: 700px;
     height: 250px;
+}
+#hashtags {
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+#hashtags h5 {
+    display: inline;
+    margin-right: 10px;
+    background-color: rgb(170, 20, 20);
+    color: white;
+    padding: 7px 12px;
+    border-radius: 12px;
+}
+
+#like {
+    margin-right: 5px;
 }
