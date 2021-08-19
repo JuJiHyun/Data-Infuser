@@ -34,13 +34,13 @@
     margin-bottom: 20px;
 }
 .Instant-API-creation {
-    margin-bottom: 390px;
+    margin-bottom: 335px;
 }
 .instant-left {
-    margin-right: 50px;
+    margin-right: 46px;
 }
 .instant-right {
-    margin-left: 50px;
+    margin-left: 46px;
 }
 .instant-title {
     font-size: 35px;
@@ -55,9 +55,11 @@
     line-height: 1.56;
 }
 #instant-img {
-    width: 588px;
+    width: 580px;
     height: 349px;
     filter: drop-shadow(20px 20px 17px rgb(190, 190, 190));
+    border: 2.4px solid rgb(195, 214, 224);
+    border-radius: 10px
 }
 .features-icon-2 {
     width: 50px;
@@ -65,7 +67,7 @@
     margin-bottom: 20px;
 }
 .Automated-API-docs {
-    margin-bottom: 390px;
+    margin-bottom: 335px;
 }
 .automated-left {
     margin-right: 59px;
@@ -96,7 +98,7 @@
     margin-bottom: 20px;
 }
 .Collection-of-Various-Data-Sources {
-    margin-bottom: 350px;
+    margin-bottom: 285px;
 }
 .collection-left {
     margin-right: 20px;
@@ -126,7 +128,7 @@
     margin-bottom: 20px;
 }
 .Microservice-Architecture {
-    margin-bottom: 350px;
+    margin-bottom: 285px;
 }
 .msa-left {
     margin-right: 80px;
@@ -156,7 +158,7 @@
     margin-bottom: 20px;
 }
 .Admin-Console {
-    margin-bottom: 350px;
+    margin-bottom: 285px;
 }
 .admin-left {
     margin-right: 50px;
@@ -188,7 +190,7 @@
     margin-bottom: 20px;
 }
 .Rock-solid-security {
-    margin-bottom: 350px;
+    margin-bottom: 285px;
 }
 .rock-left {
     margin-right: 90px;
