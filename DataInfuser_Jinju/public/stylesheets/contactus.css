@@ -1,0 +1,68 @@
+@media (max-width:993px) {
+
+    .getstarted-button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color : #2a0101;
+
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color:#b5223e;
+}
+
+.contactus{
+    margin-top: 70px;
+    width: 100%;
+    height:fit-content;
+    background : url("../images/03.banner/03.contact_back.png");
+    background-size: cover;
+    position: relative;
+    padding-bottom: 170px;
+}
+
+
+.contactus-content{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.contactus-title{
+    font-size: 44px;
+    color: #b5223e;
+    margin-bottom: 30px;
+}
+
+.contactus-text{
+    font-size: 18px;
+
+}
+
+.contact-form_position{
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding:80px;
+    background-color: rgb(245,246,249);
+
+}
+
+.container .contact-form{
+    margin: 0 auto;
+        text-align: center;
+
+
+}

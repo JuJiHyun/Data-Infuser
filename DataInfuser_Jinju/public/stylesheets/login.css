@@ -1,0 +1,43 @@
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-position{
+  width: 100%;
+  max-width: auto;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-logo{
+  width: 142px; height: 40px; text-align: center;
+}
+
+.form-bg {
+
+  padding: 50px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: rgb(211, 211, 211);
+ 
+}
+
+.return{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.no-line{
+  text-decoration-line: none;
+}
