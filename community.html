@@ -1,30 +1,198 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="main.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="community.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <title>Community</title>
-        <style> 
-            h3 {
-                margin-top: 100px;
+        <script type="text/javascript"  src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <style>
+            @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+            body {
+                font-family: 'Noto Sans KR', sans-serif;
             }
+            @media (max-width:993px) {
+                .getstarted-button {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    text-align: right;
+                }
+            }
+            .navbar .nav-item:hover .dropdown-menu {display: block;}
+            .navbar-nav .nav-item:hover .nav-link {color: #b5223e;}
         </style>
     </head>
-    <body>
-        <div>
-            <h1>All Questions</h1>
-            <button id="ask-button">Ask Question</button>
-        </div>
-        <div class="container">
 
+    <script type="text/javascript">
+    
+        var totalData = 1000;    // 총 데이터 수
+        var dataPerPage = 20;    // 한 페이지에 나타낼 데이터 수
+        var pageCount = 10;        // 한 화면에 나타낼 페이지 수
+        
+        function paging(totalData, dataPerPage, pageCount, currentPage){
+            
+            console.log("currentPage : " + currentPage);
+            
+            var totalPage = Math.ceil(totalData/dataPerPage);    // 총 페이지 수
+            var pageGroup = Math.ceil(currentPage/pageCount);    // 페이지 그룹
+            
+            console.log("pageGroup : " + pageGroup);
+            
+            var last = pageGroup * pageCount;    // 화면에 보여질 마지막 페이지 번호
+            if(last > totalPage)
+                last = totalPage;
+            var first = last - (pageCount-1);    // 화면에 보여질 첫번째 페이지 번호
+            var next = last+1;
+            var prev = first-1;
+            
+            console.log("last : " + last);
+            console.log("first : " + first);
+            console.log("next : " + next);
+            console.log("prev : " + prev);
+     
+            var $pingingView = $("#paging");
+            
+            var html = "";
+            
+            if(prev > 0)
+                html += "<a href=# id='prev'><</a> ";
+            
+            for(var i=first; i <= last; i++){
+                html += "<a href='#' id=" + i + ">" + i + "</a> ";
+            }
+            
+            if(last < totalPage)
+                html += "<a href=# id='next'>></a>";
+            
+            $("#paging").html(html);    // 페이지 목록 생성
+            $("#paging a").css("color", "black");
+            $("#paging a#" + currentPage).css({"text-decoration":"none", 
+                                               "color":"red", 
+                                               "font-weight":"bold"});    // 현재 페이지 표시
+                                               
+            $("#paging a").click(function(){
+                
+                var $item = $(this);
+                var $id = $item.attr("id");
+                var selectedPage = $item.text();
+                
+                if($id == "next")    selectedPage = next;
+                if($id == "prev")    selectedPage = prev;
+                
+                paging(totalData, dataPerPage, pageCount, selectedPage);
+            });
+                                               
+        }
+        
+        $("document").ready(function(){        
+            paging(totalData, dataPerPage, pageCount, 1);
+        });
+    </script>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow" style="background-color: white;">
+                <div class="container">
+                    <a class="navbar-brand" href="main.html">
+                        <img src="logo.png" alt="" width="130" height="36"
+                            style="margin-bottom: 17px;"></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Community</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="what_is_datainfuser.html" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Docs
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="what_is_datainfuser.html"">What is Data Infuser?</a></li>
+                                <li><a class=" dropdown-item" href="#">How to use?</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:#b5223e;" aria-current="page" href="#">Sign In</a>
+                            </li>
+
+                            <li class="getstarted-button" style="margin-left: 10px;">
+                                <a href="https://github.com/Data-Infuser" target="_blank">
+                                    <button type="button" class="btn btn-dark" style="width: 136px; height:40px;border:0; outline:0; border-radius: 12px; background: 
+                                        #b5223e;">Get Started</button></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container" style="height: 80vh;">
+            <h1 class="community-title">Community</h1>
+            <!-- questions and search bar-->
+            <div class = "search">
+                <div class="post-num"><span id="post-num">21,342,252</span> <span>questions</span></div>
+                <!-- Search form -->
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search tags..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr id="header-hr">
+            <div class="main-questions">
+                <span id="question-title">How do I? README</span>
+                <p id="question-content">This is a place to ask about how you can do the things you want to do in Data Infuser. 
+                    Data Infuser is really powerful, and there’s a lot you can do! So ask away, 
+                    and help other people figure out how to build the apps they want by chiming in. 
+                    A few guidelines: The more detail the better – give the commu …</p>
+                <hr>
+            </div>    
+
+            <div class = "question" >
+                <button class="go-question" type="button" onclick="location.href='community2.html'">Ask Question</button>
+            </div>
+            <div id="paging"></div>
         </div>
-        <div>
-            <form id="hashtag-form" action="/hashtag">
-              <input type="text" name="hashtag" placeholder="Search tag...">
-              <button class="btn">search</button>
-            </form>
-        </div>
-        <h3>nn,nnn,nnn questions</h3>
-        <hr>
+        <hr id="footer-hr">
+        <footer>
+            <div class="container">
+                <div class="promptech_footer" style="padding: 60px;">
+                    <img src="DI_img(1)/01.main/footer_logo.png" style="width: 200px;">
+                    <div class="footer_content" style="margin-top: 30px; color:#5C5C5C">
+                        <p>Name: Prompt Technology  CEO: Jonghoon Chun, Ph.D. <br>
+                            Address: Nonhyeon-ro 81-gil 12, Gangnam-gu, Seoul (Yeoksam-dong, Jo & Lee Building) <br>
+                            Contact: (t) 02-553-6441 (f) 02-553-6442   Email: promptech@promptech.co.kr</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+                crossorigin="anonymous">
+        </script>
+
     </body>
+
 </html>

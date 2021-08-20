@@ -1,4 +1,7 @@
 @media (max-width: 1400px) {
+    .Features {
+        margin-left: 200px;
+    }
     .instant-left {
         margin-right: 0px;
     }

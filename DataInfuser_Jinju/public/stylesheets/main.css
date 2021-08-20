@@ -80,7 +80,6 @@ body {
     padding: 120px;
     background-position: top;
     background-size: cover;
-
 }
 
 .main-main_title{
@@ -92,8 +91,6 @@ body {
     line-height: normal;
     letter-spacing: -1px;
     color: #2a0101;
-
-
 }
 
 .main-main_text{
@@ -147,11 +144,7 @@ body {
       height: 60%;
   }
 
-
-
-
 .main-about_title{
-    
     text-align: center;
     font-size: 24px;
     line-height: 200%;
@@ -173,20 +166,13 @@ body {
     background-position: cover;
     background-repeat: no-repeat;
     background-size: 120%;
-
-
 }
-
 
 .main-WUD{
     padding:130px;
-
-
 }
 
-
 .main-medium_title{
-
     text-align: center;
     font-size: 36px;
     font-weight: 600;
